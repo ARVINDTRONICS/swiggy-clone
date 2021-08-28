@@ -1,0 +1,23 @@
+.header {
+  width: 100%;
+  height: 40vh;
+  padding: 5em;
+  background-color: #171a29;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offerCard {
+  height: 300px;
+
+  padding: 1em;
+  img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
