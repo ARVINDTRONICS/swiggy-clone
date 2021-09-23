@@ -1,39 +1,78 @@
-.navbar {
-  display: flex;
-  position: sticky;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 10vh;
-  .logowrap {
-    width: 50%;
-    img {
-      margin-left: 10%;
-      width: 2em;
-      &:hover {
-        transform: scale(1.5);
-      }
+@import "../../assets/globalScss/common.scss";
+
+.icon {
+  @extend .flex-row-center;
+  width: 150px;
+  height: 100px;
+  svg {
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  div {
+    :hover {
+      color: orange;
     }
   }
-  .navbarmenu {
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  top: 0;
+  .logowrap {
     width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .icon {
-      margin: 2em;
+    margin-left: 1rem;
+    img {
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+    }
+    :hover {
+      transform: scale(1.4);
+    }
+  }
+  @extend .icon;
+  .navbarmenu {
+    display: none;
+  }
+
+  .navbarmenuopen {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    @extend .flex-column-center;
+    @extend .icon;
+  }
+  .hamburgerclose {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    .hamburger {
+      display: none;
+    }
+    .navbarmenuopen {
+      display: none;
+    }
+    .navbarmenu {
+      width: 75%;
+      height: 100%;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
-      svg {
-        margin: 1em;
-        width: 2em;
-        height: 2em;
-      }
-      &:hover {
-        color: orange;
-        cursor: pointer;
-      }
     }
   }
 }

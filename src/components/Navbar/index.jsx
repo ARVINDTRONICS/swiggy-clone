@@ -5,37 +5,55 @@ import {
   GiftIcon,
   SupportIcon,
   UserIcon,
-  ShoppingBagIcon
+  ShoppingBagIcon,
+  MenuIcon,
+  XIcon
 } from "@heroicons/react/outline";
 
+import { MENU_ITEMS } from "../../constants/navbar";
+
+import React, { useState } from "react";
+
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuClasses = isMenuOpen ? classes.navbarmenuopen : classes.navbarmenu;
   return (
     <>
       <div className={`${classes.navbar}`}>
         <div className={classes.logowrap}>
           <img src={SwiggyLogo} alt="Swiggy Logo"></img>
         </div>
-        <div className={classes.navbarmenu}>
-          <div className={classes.icon}>
-            <SearchIcon />
-            Search
-          </div>
-          <div className={classes.icon}>
-            <GiftIcon />
-            Offers
-          </div>
-          <div className={classes.icon}>
-            <SupportIcon />
-            Help
-          </div>
-          <div className={classes.icon}>
-            <UserIcon />
-            Sign In
-          </div>
-          <div className={classes.icon}>
-            <ShoppingBagIcon />
-            Cart
-          </div>
+        <div
+          onClick={() => {
+            setIsMenuOpen(!isMenuOpen);
+          }}
+          className={`${classes.icon} ${classes.hamburger}`}
+        >
+          <MenuIcon />
+        </div>
+        <div className={menuClasses}>
+          {isMenuOpen && (
+            <div
+              onClick={() => {
+                setIsMenuOpen(false);
+              }}
+              className={`${classes.icon} ${classes.hamburgerclose} `}
+            >
+              <XIcon />
+            </div>
+          )}
+          {MENU_ITEMS.map((eachMenuItem) => {
+            const IconComponent = eachMenuItem.icon;
+            return (
+              <div className={`${classes.icon} `}>
+                <div>
+                  {<IconComponent />}
+                  {eachMenuItem.title}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </>
