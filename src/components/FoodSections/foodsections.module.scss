@@ -1,0 +1,48 @@
+@import "../../assets/globalScss/_variables.scss";
+
+.foodsectionwrap {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  height: auto;
+  overflow: scroll;
+  box-shadow: 0 2px 4px 0 lightgray;
+  .capsule {
+    min-width: 33.33%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    .sectionImage {
+      margin-right: 1rem;
+      width: 35px;
+      height: 35px;
+    }
+    .sectionTitle {
+      margin: 0.5rem 0rem;
+      line-height: 1.25rem;
+      font-size: 0.8rem;
+      text-align: left;
+      font-weight: bold;
+    }
+    .sectionOption {
+      font-size: 0.6rem;
+    }
+    &:hover {
+      background-color: $light-orange;
+      color: white;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .foodsectionwrap {
+    margin-left: 2.5rem;
+    width: 15%;
+    flex-direction: column;
+    overflow: hidden;
+
+    .capsule {
+      padding: 1.5rem;
+    }
+  }
+}

@@ -7,17 +7,17 @@
   font-size: 14px;
 }
 @font-face {
-  font-family: "Milliard SemiBold";
+  font-family: "Milliard Light";
   font-style: normal;
   font-weight: normal;
-  src: local("Milliard SemiBold"),
-    url("./assets/fonts/milliard/Rene\ Bieder\ \ Milliard\ SemiBold.woff")
+  src: local("Milliard Light"),
+    url("./assets/fonts/milliard/Rene\ Bieder\ \ Milliard\ Light.woff")
       format("woff");
 }
 
 body {
   margin: 0;
-  font-family: "Milliard SemiBold", Arial, Helvetica Neue, sans-serif;
+  font-family: "Milliard Light", Arial, Helvetica Neue, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

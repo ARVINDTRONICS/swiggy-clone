@@ -1,0 +1,14 @@
+.restaurantListContainer {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .restaurantListContainer {
+    .restaurantCards {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

@@ -50,3 +50,42 @@ export const OFFERS = [
       "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/cb0fuky4kdrjyisnvox1"
   }
 ];
+
+export const FOOD_SECTIONS = [
+  {
+    options: 227,
+    name: "Offers Near You",
+    source:
+      "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_90,h_90/eyperwsfhaoa5vktjtu4"
+  },
+  {
+    options: 96,
+    name: "Top Picks",
+    source:
+      "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_90,h_90/rng/md/carousel/production/ser2sttildk9yt7t2s91"
+  },
+  {
+    options: 33,
+    name: "What's New",
+    source:
+      "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_90,h_90/hxizld3pqhnk0smw27sl"
+  },
+  {
+    options: 67,
+    name: "Premium",
+    source:
+      "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_90,h_90/marketing-dashboard/carousel/ftnsdmo6fotidtzobbm2"
+  },
+  {
+    options: 20,
+    name: "Only on Swiggy",
+    source:
+      "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_90,h_90/y4vnumwu4f8olsly1hnw"
+  },
+  {
+    options: 857,
+    name: "See All",
+    source:
+      "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_90,h_90/See_all_cj8kln"
+  }
+];

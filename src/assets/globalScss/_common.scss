@@ -10,3 +10,45 @@
   justify-content: center;
   align-items: center;
 }
+
+.text-bold {
+  font-weight: bold;
+}
+.icon {
+  @extend .flex-row-center;
+  width: 150px;
+  height: 100px;
+  svg {
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  div {
+    :hover {
+      color: orange;
+    }
+  }
+}
+.margin-all-1 {
+  margin: 1rem;
+}
+.margin-left-half {
+  margin-left: 0.5rem;
+}
+
+.padding-all-1 {
+  padding: 1rem;
+}
+.padding-0 {
+  padding: 0rem;
+}
+
+.font-size-one-half {
+  font-size: 1.5rem;
+}
+input:invalid ~ span:after {
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
+}

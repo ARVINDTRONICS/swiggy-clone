@@ -1,0 +1,81 @@
+.sideDrawerWrap {
+  .sideDrawer {
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100vh;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform 0.1s ease-in;
+    z-index: 1000;
+  }
+  .sideDrawerOpen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    transform: translateX(0%);
+    background-color: white;
+    z-index: 1000;
+    transition: transform 0.1s ease-in;
+  }
+  .sideDrawerOverlay {
+    display: none;
+    z-index: 1000;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .sideDrawerWrap {
+    .sideDrawerLeft {
+      transform: translateX(-100%);
+      transition: transform 0.01s ease-in;
+    }
+    .sideDrawerRight {
+      transform: translateX(100%);
+      transition: transform 0.01s ease-in;
+    }
+    .sideDrawerOpenLeft {
+      width: 30%;
+      height: 100%;
+      position: fixed;
+      top: 0%;
+      left: 0%;
+      transform: translateX(0%);
+      background-color: white;
+      z-index: 1000;
+      transition: transform 0.01s ease-in;
+    }
+    .sideDrawerOpenRight {
+      width: 30%;
+      height: 100%;
+      position: fixed;
+      top: 0%;
+      left: 70%;
+      transform: translateX(0%);
+      background-color: white;
+      z-index: 1000;
+      transition: transform 0.01s ease-in;
+    }
+    .sideDrawerOverlayLeft {
+      display: block;
+      width: 70%;
+      height: 100%;
+      position: fixed;
+      top: 0%;
+      left: 30%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .sideDrawerOverlayRight {
+      display: block;
+      width: 70%;
+      height: 100%;
+      position: fixed;
+      top: 0%;
+      left: 0%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}

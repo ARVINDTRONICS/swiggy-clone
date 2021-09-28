@@ -1,0 +1,47 @@
+@import "../../../assets/globalScss/variables.scss";
+
+.restaurantCardWrap {
+  width: 100%;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  height: auto;
+  box-shadow: 0 2px 4px 0 lightgray;
+  padding: 1rem;
+  .restaurantCardDetails {
+    .restaurantTitle {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    .restaurantCategory {
+      color: gray;
+      margin-top: 1rem;
+    }
+    .restaurantMeta {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      .rating {
+        display: flex;
+        color: white;
+        padding: 0.5rem;
+        background-color: $light-green;
+      }
+    }
+    .restaurantOffer {
+      margin-top: 1rem;
+      color: $light-brown;
+    }
+  }
+  &:hover {
+    border: 1px solid lightgray;
+    transform: scale(1.1);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .restaurantCardWrap {
+    width: 30%;
+  }
+}
