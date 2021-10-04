@@ -1,22 +1,5 @@
 @import "../../assets/globalScss/common.scss";
 
-.icon {
-  @extend .flex-row-center;
-  width: 150px;
-  height: 100px;
-  svg {
-    margin: 1rem;
-    width: 2rem;
-    height: 2rem;
-  }
-
-  div {
-    :hover {
-      color: orange;
-    }
-  }
-}
-
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -41,9 +24,10 @@
   .location {
     width: 40%;
     cursor: pointer;
+    font-size: 0.75rem;
     span:first-child {
       text-decoration: underline;
-      font-weight: bolder;
+      font-weight: 700;
     }
   }
   @extend .icon;
@@ -54,6 +38,7 @@
   .navbarmenuopen {
     width: 100%;
     height: 100vh;
+    touch-action: none;
     background-color: white;
     position: absolute;
     top: 0;
@@ -68,6 +53,48 @@
   }
 }
 
+.loginForm {
+  width: 100%;
+  height: 50vh;
+  .loginHeader {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  .loginInput {
+    width: 80%;
+    margin: 1rem auto;
+    input {
+      padding: 1.5rem;
+      width: 100%;
+    }
+    input:invalid {
+      border: 1px solid red;
+    }
+    input:valid {
+      border: 1px solid green;
+    }
+  }
+  .loginSubmit {
+    width: 80%;
+    margin: 1.5rem auto;
+    height: 5vh;
+    button {
+      width: 100%;
+      height: 100%;
+      background-color: orange;
+      color: white;
+      font-size: 1rem;
+      border-radius: 2px;
+      border: none;
+    }
+  }
+}
 @media only screen and (min-width: 768px) {
   .navbar {
     .hamburger {

@@ -4,7 +4,7 @@
   width: 100%;
   margin-top: 1rem;
   display: flex;
-  height: auto;
+  height: fit-content;
   overflow: scroll;
   box-shadow: 0 2px 4px 0 lightgray;
   .capsule {
@@ -12,6 +12,7 @@
     padding: 0.5rem;
     display: flex;
     align-items: center;
+    cursor: pointer;
     .sectionImage {
       margin-right: 1rem;
       width: 35px;

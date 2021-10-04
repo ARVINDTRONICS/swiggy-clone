@@ -24,12 +24,17 @@
     height: 2rem;
   }
 
-  div {
-    :hover {
+  .iconWrap {
+    &:hover {
       color: orange;
     }
   }
 }
+
+.m-auto {
+  margin: 0 auto;
+}
+
 .margin-all-1 {
   margin: 1rem;
 }

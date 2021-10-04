@@ -13,7 +13,6 @@ export const SideDrawer = ({ isOpen, direction, onClose, children }) => {
       ? classes.sideDrawerOpenRight
       : classes.sideDrawerRight;
   }
-  console.log(sideDrawerClass);
   return (
     <div className={classes.sideDrawerWrap}>
       <div className={sideDrawerClass} v>
